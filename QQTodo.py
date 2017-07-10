@@ -1,11 +1,12 @@
 """
-The purpose of this code is to create a working todo list manager programe for my own use.
+The purpose of this code is to create a working todo list manager program for my own use.
 Requrements:
 	Text based
 	Each task must have a project and a context
 	Projects are noted with a leading '+'
 	Contexts are notes with a leading '@'
 		i.e. Buy a new trashcan +home @store
+	Tasks are either True (to be done) or False (done)
 """
 
 class Todo:
@@ -16,7 +17,8 @@ class Todo:
 		state: the state of doneness of the task as a boolean T/F
 	"""
 	def __init__(self, task, project, context, state):
-		"""return a ToDo that is a *taks* with a *project* and a *context*
+		"""return a ToDo that is a *taks* with a *project* and a *context* and a state of True (all
+		new tasks are in a state of 'to be done' by default.
 		"""
 		self.task = task
 		self.project = project
